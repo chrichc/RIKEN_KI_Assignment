@@ -16,3 +16,20 @@ mean_median_ratio <- function(x) {
 }
 
 2. Write a function that ignores the lowest and the highest value from a given vector and calculate the mean.
+
+trimmed_mean <- function(x) {
+  if (!is.numeric(x)) {
+    stop("Input must be a numeric vector.")
+  }
+  
+  x <- sort(x, na.last = NA)  # Sort and remove NA values
+  if (length(x) <= 2) {
+    warning("Vector must contain more than two values to exclude min and max.")
+    return(NA)
+  }
+  
+  trimmed <- x[-c(1, length(x))]  # Remove first (min) and last (max)
+  return(mean(trimmed))
+}
+
+
