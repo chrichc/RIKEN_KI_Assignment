@@ -1,1 +1,16 @@
+1. Use the R internal CO2 dataset (“data(CO2)”).
+```{r}
+data(CO2)
+```
 
+2. Describe briefly the content of the CO2 dataset using the help function.
+```{r}
+help(CO2)
+```
+
+3. What is the average and median CO2 uptake of the plants from Quebec and
+Mississippi?
+
+
+4. [Optional] In the “airway” example data from Bioconductor, how many genes are
+expressed in each sample? How many genes are not expressed in any sample?
