@@ -14,30 +14,28 @@ log(32, base = exp(2))
 
 3. What is the sum of the numbers from 1 to 1000?
 
+```{r}
 sum(1:1000)
+```
 [1] 500500
 
 4. What is the sum of all even numbers from 2 to 1000?
 
-
 ```{r}
-even_numbers <- sum(seq(2, 100, by = 2))
-print(even_numbers)
+sum(seq(2, 100, by = 2))
 ```
 [1] 2550
 
 5. How many pairwise comparisons are there for 100 genes?
 
 ```{r}
-pairwise_gene <- choose(100, 2)
-print(pairwise_gene)
+choose(100, 2)
 ```
 [1] 4950
 
 6. And how many ways to arrange 100 genes in triples?
 
 ```{r}
-Triple <- choose(100, 3)
-print(Triple)
+choose(100, 3)
 ```
 [1] 161700
