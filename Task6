@@ -32,4 +32,16 @@ trimmed_mean <- function(x) {
   return(mean(trimmed))
 }
 
+3. Read about piping from here:https://r4ds.had.co.nz/pipes.html#pipes (you don’t have to learn everything, a basic understanding of the usage is enough). Write a short
+(max. 300 characters, no spaces) explanation of why, how, and when not to use pipes.
+
+Pipes (%>%) in R are used to make code more readable by expressing a sequence of operations in a linear, step-by-step format. They are especially useful in data transformation workflows, allowing the user to avoid nested function calls and write code that flows logically. 
+Pipes work by passing the output of one function as the first argument to the next, which is ideal when working with functions that take a data frame as their first input. The user can also use the dot (.) to specify where the piped object should go if it’s not the first argument. 
+However, pipes are not always appropriate. They should be avoided when dealing with complex logic, such as loops or branching conditions, where clarity is better served by breaking the code into smaller parts. Pipes also make debugging harder because intermediate results are not easily inspected. 
+Functions that require multiple inputs from different sources may not work well with pipes, and some functions behave unpredictably due to non-standard evaluation. Additionally, when the code involves side effects or assignments, using named variables is often clearer than chaining operations with pipes.
+
+
+
+
+
 
