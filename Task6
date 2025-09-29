@@ -1,1 +1,18 @@
+1. Write a function that calculates the ratio of the mean and the median of a given vector.
 
+mean_median_ratio <- function(x) {
+  if (!is.numeric(x)) {
+    stop("Input must be a numeric vector.")
+  }
+  mean_val <- mean(x, na.rm = TRUE)
+  median_val <- median(x, na.rm = TRUE)
+  
+  if (median_val == 0) {
+    warning("Median is zero; ratio may be infinite or undefined.")
+    return(NA)
+  }
+  
+  return(mean_val / median_val)
+}
+
+2. Write a function that ignores the lowest and the highest value from a given vector and calculate the mean.
